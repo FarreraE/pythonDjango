@@ -1,0 +1,39 @@
+{% extends 'basicTemplate.html' %}
+{% load static %}
+{% block leftMain %}
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld.svg' %}" class="logoqrld" alt="">
+</div>
+<div class="container leftMain__logInSignUpOptions">
+    <div class="row">
+        <div class="col-6 leftMain__logInSignUpOption__Left"> <a href="{% url 'logIn' %}"> Log In</a></div>
+        <div class="col-6 leftMain__logInSignUpOption__Right"> <a href="{% url 'settingsProfile' %}"> Sign Up</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid leftMain__logInSignUpBlock">
+    <form action="/tablaDatos/printProfile/" method="POST" class="formProfile">{% csrf_token %}
+        <!-- EMAIL -->
+        <div class="mb-3 imputItem">
+            <input type="email" name="userEmail" class="form-control" id="exampleInputEmail1" placeholder="Correo"
+                aria-describedby="emailHelp">
+        </div>
+        <!-- PASSWORD  -->
+        <div class="mb-3">
+            <input type="password" name="userPassword" class="form-control" placeholder="Contraseña"
+                id="exampleInputPassword1">
+        </div>
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+</div>
+{% endblock %}
+{% block rightMain %}
+<div class="container rightBackgorund">
+<h1>Correo + Contraseña + Entrar :)</h1>
+</div>
+{% endblock %}
+
+<p>Titulo : <input type="text" name="Titulo"></p>
+<p>Subtitulo : <input type="text" name="Subtitulo"></p>
+<p>Cuerpo : <input type="text" name="Cuerpo"></p>

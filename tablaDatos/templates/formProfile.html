@@ -1,0 +1,27 @@
+{% extends 'basicTemplate.html' %}
+{% load static %}
+{% block leftMain %}
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld.svg' %}" class="logoqrld" alt="">
+</div>
+<div class="container leftMain__logInSignUpOptions">
+    <div class="row">
+        <div class="col-6 leftMain__logInSignUpOption__Left"> <a href="{% url 'logIn' %}"> Log In</a></div>
+        <div class="col-6 leftMain__logInSignUpOption__Right"> <a href="{% url 'settingsProfile' %}"> Sign Up</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid leftMain__logInSignUpBlock">
+    <form action="/tablaDatos/linkAdmin/" method="POST" class="formProfile">{% csrf_token %}
+        {{formProfile.as_ul}}
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block rightMain %}
+<div class="container rightBackgorund">
+    <h1>Algunos Datos + Registrar :D</h1>
+</div>
+{% endblock %}

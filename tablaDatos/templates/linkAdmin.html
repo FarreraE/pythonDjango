@@ -1,0 +1,44 @@
+{% extends 'basicTemplate.html' %}
+{% load static %}
+{% block leftMain %}
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld.svg' %}" class="logoqrld" alt="">
+</div>
+<div class="container-fluid leftMain__logInSignUpBlock">
+    <form action="/tablaDatos/printProfile/" method="POST" class="formProfile">{% csrf_token %}
+        <!-- facebook -->
+        <div class="mb-3">
+            <input type="text" name="facebook" class="form-control" id="exampleInputEmail1" placeholder="facebook"
+                aria-describedby="emailHelp">
+        </div>
+        <!-- instagram -->
+        <div class="mb-3">
+            <input type="text" name="instagram" class="form-control" id="exampleInputEmail1" placeholder="instagram"
+                aria-describedby="emailHelp">
+        </div>
+        <!-- whatsapp -->
+        <div class="mb-3">
+            <input type="email" name="whatsapp" class="form-control" id="exampleInputEmail1" placeholder="whatsapp"
+                aria-describedby="emailHelp">
+        </div>
+        <!-- twitter  -->
+        <div class="mb-3">
+            <input type="password" name="twitter" class="form-control" placeholder="twitter" id="exampleInputPassword1">
+        </div>
+        <!-- CHECK TEST 
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>-->
+        <!-- SUBMIT -->
+        <button type="submit" class="btn btn-primary">Completar</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block rightMain %}
+<div class="container rightBackgorund">
+    <h1>COPIA + PEGA</h1>
+    <p>Copiar y pega cada uno de tus links</p>
+</div>
+{% endblock %}

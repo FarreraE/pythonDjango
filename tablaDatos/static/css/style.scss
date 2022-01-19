@@ -1,0 +1,118 @@
+body {
+    background-color: #fff;
+}
+
+.bodySection {
+    .leftMain {
+        background-color: #888792;
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2%;
+        margin-top: 3%;
+        p {
+            text-align: justify;
+            color: #fff;
+        }
+        .leftMain__logoContainer {
+            //background-color: red;
+            width: 50%;
+            opacity: 0.2;
+            margin-top: 5%;
+        }
+        .leftMain__logInSignUpBlock {
+            // background-color: red;
+            padding: 2%;
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 5%;
+                margin-top: 1%;
+                input {
+                    border: none;
+                    background-color: #c1c1c3;
+                    margin-top: 2%;
+                }
+                input::placeholder {
+                    border: none;
+                    color: #000;
+                }
+                .btn-primary {
+                    font-size: 1.2rem;
+                    padding: 2%;
+                    margin-top: 3%;
+                    background-color: #000;
+                }
+                .btn-primary:hover {
+                    padding: 2%;
+                    background-color: #c1c1c3;
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .leftMain__logInSignUpOptions {
+            //background-color: green;
+            font-size: 1.2rem;
+            //@extend: bold;
+            margin-top: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            a {
+                text-decoration: none;
+                color: #fff;
+                opacity: 0.7;
+            }
+            a:hover {
+                color: #00288a;
+                opacity: 1;
+            }
+            .leftMain__logInSignUpOption__Left {
+                border-right: rgba(255, 255, 255, 0.2) solid 0.01rem;
+                text-align: center;
+            }
+            .leftMain__logInSignUpOption__Right {
+                border-left: rgba(255, 255, 255, 0.2) solid 0.01rem;
+                text-align: center;
+            }
+        }
+    }
+    .rightMain {
+        margin-top: 5%;
+        opacity: 0.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .rightBackgorund {
+            background-image: url("https://media.giphy.com/media/xUA7aS269qm5PX7fa0/giphy.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+/* 
+  
+  eef8ff Background azul claro
+  00288a Azul oscuro 30 
+  113a9f Azul contraste
+  3ebcf9 Azul claro 10
+  ff9b06 Naranja 10
+  
+
+  191645
+  43c6ac
+  ffffff
+  e5e5e5
+  */

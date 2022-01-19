@@ -1,0 +1,51 @@
+{% extends 'basicTemplate.html' %}
+{% load static %}
+{% block leftMain %}
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld.svg' %}" class="logoqrld" alt="">
+</div>
+<div class="container-fluid leftMain__logInSignUpBlock">
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a type specimen book.</p>
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Settings</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Log Out</a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
+{% block rightMain %}
+
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'printProfile' %}"> QR Code</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'printProfilelinkAdmin' %}">Link Admin</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'printProfile' %}">Post History</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'printProfileBusqueda' %}">Busqueda</a>
+    </li>
+</ul>
+
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld2.svg' %}" class="logoqrld" alt="">
+</div>
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+    a type specimen book.</p>
+
+<div class="container leftMain__logoContainer">
+    <img src="{%static 'img\logoqrld2.svg' %}" class="logoqrld" alt="">
+</div>
+
+{% endblock %}

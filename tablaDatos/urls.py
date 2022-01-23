@@ -13,7 +13,7 @@ urlpatterns = [
          name="printProfilelinkAdmin"),
     path('printProfileBusqueda/', views.printProfileBusqueda,
          name="printProfileBusqueda"),
-    
+     path("buscarNombre/", views.buscarNombre)
 
 
 ]

@@ -34,14 +34,13 @@
         {% block rightMain %}
 
         {% endblock %}
-        {% if users %}
+        {% if userDB %}
 
         <p>Estamos buscando el: {{name}}</p>
 
         <ul>
-          {% for name in users %}
+          {% for user in userDB %}
           <li> {{user.name}} </li>
-          <li> {{user.email}} </li>
           {% endfor %}
 
         </ul>

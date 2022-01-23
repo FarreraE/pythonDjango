@@ -35,7 +35,7 @@
         <a class="nav-link" href="{% url 'printProfileBusqueda' %}">Busqueda</a>
     </li>
 </ul>
-<form action="/tablaDatos/" method="GET" class="formProfile">{% csrf_token %}
+<form action="/tablaDatos/buscarNombre" method="GET" class="formProfile">{% csrf_token %}
 
     <!-- BUSQUEDA -->
     <div class="mb-3">
@@ -44,5 +44,4 @@
     </div>
     <button type="submit" class="btn btn-primary">Buscar</button>
 </form>
-
 {% endblock %}
